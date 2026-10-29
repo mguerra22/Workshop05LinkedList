@@ -300,4 +300,24 @@ public class DoublyLinkedList<T>
         return result;
     }
 
+    /// <summary>
+    /// Sorts the list in descending order.
+    /// </summary>
+    public void SortDescending()
+    {
+        var current = _head;
+
+        while (current != null)
+        {
+            var next = current.Next;
+            current.Next = current.Previous;
+            current.Previous = next;
+            current = next;
+        }
+
+        var temp = _head;
+        _head = _tail;
+        _tail = temp;
+    }
+
 }
