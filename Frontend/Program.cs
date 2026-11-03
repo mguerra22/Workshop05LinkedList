@@ -38,6 +38,8 @@ while (option != 0)
             {
                 list.Insert(value.Trim());
                 Console.WriteLine("Elemento agregado correctamente.");
+                Console.BackgroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else
             {
@@ -143,7 +145,7 @@ while (option != 0)
             break;
 
         case 0:
-            Console.WriteLine("Hasta luego.");
+            Console.WriteLine("Good Bye...");
             break;
 
         default:

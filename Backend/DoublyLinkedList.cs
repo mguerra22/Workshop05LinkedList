@@ -5,7 +5,6 @@ using System.Collections.Generic;
 /// <summary>
 /// Represents a generic doubly linked list.
 /// </summary>
-/// <typeparam name="T">The type of elements stored in the list.</typeparam>
 public class DoublyLinkedList<T>
 {
     private DoubleNode<T>? _head;
@@ -23,7 +22,6 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Inserts an element into the list in ascending order.
     /// </summary>
-    /// <param name="data">The element to insert.</param>
     public void Insert(T data)
     {
         var newNode = new DoubleNode<T>(data);
@@ -67,7 +65,6 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Returns the elements of the list from beginning to end.
     /// </summary>
-    /// <returns>A string containing the elements in ascending order.</returns>
     public override string ToString()
     {
         var result = string.Empty;
@@ -87,11 +84,10 @@ public class DoublyLinkedList<T>
         return result;
     }
 
-
     /// <summary>
     /// Returns the elements of the list from end to beginning.
     /// </summary>
-    /// <returns>A string containing the elements in descending order.</returns>
+
     public string ToStringReverse()
     {
         var result = string.Empty;
@@ -115,8 +111,6 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Determines whether the list contains a specific element.
     /// </summary>
-    /// <param name="data">The element to search for.</param>
-    /// <returns>True if the element exists; otherwise, false.</returns>
     public bool Contains(T data)
     {
         var current = _head;
@@ -133,13 +127,9 @@ public class DoublyLinkedList<T>
 
         return false;
     }
-
-
     /// <summary>
     /// Removes the first occurrence of an element from the list.
     /// </summary>
-    /// <param name="data">The element to remove.</param>
-    /// <returns>True if an element was removed; otherwise, false.</returns>
     public bool Remove(T data)
     {
         var current = _head;
@@ -178,8 +168,6 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Removes all occurrences of an element from the list.
     /// </summary>
-    /// <param name="data">The element to remove.</param>
-    /// <returns>The number of elements removed.</returns>
     public int RemoveAll(T data)
     {
         var count = 0;
@@ -195,7 +183,7 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Gets all elements with the highest occurrence count.
     /// </summary>
-    /// <returns>A list containing the mode or modes.</returns>
+
     public List<T> GetModes()
     {
         var modes = new List<T>();
@@ -253,7 +241,7 @@ public class DoublyLinkedList<T>
     /// <summary>
     /// Creates a graph showing the occurrences of each element.
     /// </summary>
-    /// <returns>A string representing the occurrence graph.</returns>
+
     public string GetOccurrenceGraph()
     {
         var result = string.Empty;
