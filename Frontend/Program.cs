@@ -38,9 +38,7 @@ while (option != 0)
             {
                 list.Insert(value.Trim());
                 Console.WriteLine("Elemento agregado correctamente.");
-                Console.BackgroundColor = ConsoleColor.Blue;
-                Console.ForegroundColor = ConsoleColor.White;
-            }
+                }
             else
             {
                 Console.WriteLine("El elemento no puede estar vacío.");
